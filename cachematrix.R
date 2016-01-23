@@ -1,8 +1,8 @@
-## this code finds the inverse matrix of matrix
-## functions do
+## this code computes the inverse matrix of a matrix
 
-## Write a short comment describing this function
 
+## this function takes a matrix as input ,here x is a input
+## functions contains a list of all the functions.
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
   set <- function(y) {
@@ -22,12 +22,14 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        ## Returns a matrix that is the inverse of 'x'
   m <- x$getsolve()
+  ##checks whether it is cached or not
   if(!is.null(m)) {
     message("getting cached data")
     return(m)
   }
+  ##finding the inverse matrix
   data <- x$get()
   m <- solve(data, ...)
   x$setsolve(m)
